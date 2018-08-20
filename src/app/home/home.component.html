@@ -1,0 +1,19 @@
+<div class="home">
+  <div class="home-hero">
+    <img class="hero-image" [src]="profilePic">
+    <div class="hero-heading">
+      <h1 class="hero-title">{{ title }}</h1>
+      <h2 class="hero-subtitle">{{ subtitle }}</h2>
+      <div class="hero-links">
+        <a *ngFor="let link of links" [title]="link.altText" [href]="link.url" target="_blank"><fa-icon [icon]="link.icon"></fa-icon></a>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let section of sections">
+    <h4 class="section-title">{{ section.title }}</h4>
+    <p class="section-content" *ngFor="let item of section.content">{{ item }}</p>
+  </div>
+  <h4 class="section-title">Past Experience</h4>
+  <app-jobs></app-jobs>
+</div>
+  

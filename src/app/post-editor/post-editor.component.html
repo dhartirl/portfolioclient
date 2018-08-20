@@ -1,0 +1,39 @@
+<div class="edit-form">
+  <h1 *ngIf="id == ''" class="edit-heading">New Post</h1>
+  <h1 *ngIf="id != ''" class="edit-heading">Edit Post</h1>
+  <fieldset class="edit-details">
+      <div class="input-group">
+        <span class="input-description">Title:</span>
+        <input type="text" class="input-value edit-title" [(ngModel)]="item.name" placeholder="Post Title">
+      </div>
+      <div class="input-group">
+        <span class="input-description">URL:</span>
+        <input type="text" class="input-value edit-url" [(ngModel)]="item.url" placeholder="URL">
+      </div>
+      <div class="input-group">
+        <span class="input-description">Image:</span>
+        <input type="file" class="input-value edit-image" (change)="selectImage($event)">
+      </div>
+      <img *ngIf="item.image" [src]="item.image" class="post-image" />
+      <div class="input-group">
+        <span class="input-description">Description:</span>
+        <textarea class="input-value edit-description" [(ngModel)]="item.description" placeholder="Short Description"></textarea>
+      </div>
+      <div class="input-group" *ngFor="let tech of item.techStack; let i = index; trackBy:trackByFn">
+        <span class="input-description">{{ i == 0 ? 'Tech:' : ''}}</span>
+        <input type="text" class="input-value edit-tech" [(ngModel)]="item.techStack[i]" placeholder="Technology">
+        <button (click)="removeTech(i)">x</button>
+      </div>
+      <div class="input-group">
+        <span class="input-description"></span>
+        <button (click)="addTech()">+</button>
+      </div>
+  </fieldset>
+  <div class="edit-writeup-container">
+      <editor [(ngModel)]="item.writeup"></editor>
+  </div>
+  <div class="edit-buttons">
+    <input *ngIf="id != ''" type="submit" value="Delete" (click)="deleteItem()">
+    <input type="submit" value="Submit" (click)="id != '' ? updatePost() : createPost()">
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<ul class="portfolio">
+  <li *ngFor="let item of items">
+    <a class="portfolio-item" routerLink="/portfolio/{{item._id}}">
+      <img class="portfolio-item-image" [src]="item.image" />
+      <div class="portfolio-item-details">
+        <h2 class="portfolio-item-name">{{item.name}}</h2>
+        <p class="portfolio-item-description">{{item.description}}</p>
+      </div>
+    </a>
+  </li>
+</ul>

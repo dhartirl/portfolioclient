@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: url('/assets/img/bgpattern.png');
+}
+
+pre.code {
+    white-space: pre-wrap;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+}

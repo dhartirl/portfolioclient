@@ -1,0 +1,47 @@
+.body-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.body-contact {
+    color: #fff;
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    float: left;
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+}
+
+.body-contact li {
+    padding: 5px;
+}
+
+.body-main {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.main-container {
+    margin: auto;
+    padding: 100px 0;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.body-sidebar {
+    width: 600px;
+    height: 100%;
+    border-left: 1px solid #fff;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    color: #fff;
+    text-align: center;
+}

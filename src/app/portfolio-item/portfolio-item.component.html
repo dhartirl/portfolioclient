@@ -1,0 +1,18 @@
+<div class="article">
+  <h1 class="article-title">{{ item.name }}</h1>
+  <a *ngIf="canEdit" class="article-edit" routerLink="/portfolio/{{item._id}}/edit">Edit</a>
+  <div class="article-blurb">
+    <div class="article-image-container">
+        <img class="article-image" [src]="item.image" />
+    </div>
+    <div class="article-details">
+      <p class="article-headline">{{item.description}}</p>
+      <p *ngIf="item.url">Demo: <a target="_blank" [href]="item.url">{{ item.url }}</a></p>
+      <p *ngIf="item.techStack.length > 0">Tech Stack:</p>
+      <ul *ngIf="item.techStack.length > 0" class="article-tech">
+        <li *ngFor="let tech of item.techStack">{{tech}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="article-content" [innerHtml]="item.writeup"></div>
+</div>

@@ -1,0 +1,49 @@
+.home {
+    color: #fff;
+}
+
+.home-hero {
+    display: flex;
+}
+
+.hero-heading {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.hero-title {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+}
+
+.hero-subtitle {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+.section-title {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.section-content {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+.hero-links {
+    font-size: 2em;
+}
+
+.hero-links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 5px;
+}
+
+.hero-links a:hover {
+    color: #4a95ea;
+}

@@ -1,0 +1,30 @@
+.job-title {
+    margin-bottom: 0;
+    font-size: 1.2em;
+}
+
+.job-details {
+    margin-top: 0.3em;;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+}
+
+.job-address {
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.job-dates {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.job-bullets {
+    line-height: 1.4em;
+    margin-top: 0.5em;
+}
+
+.job-edit-link, .job-edit-link:hover, .job-edit-link:visited {
+    color: #ffffff;
+}

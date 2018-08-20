@@ -1,0 +1,35 @@
+<div class="edit-form">
+  <h1 *ngIf="id == ''" class="edit-heading">New Job</h1>
+  <h1 *ngIf="id != ''" class="edit-heading">Edit Job</h1>
+  <fieldset class="edit-details">
+      <div class="input-group">
+        <span class="input-description">Title:</span>
+        <input type="text" class="input-value edit-title" [(ngModel)]="item.title" placeholder="Job Title">
+      </div>
+      <div class="input-group">
+        <span class="input-description">Employer:</span>
+        <input type="text" class="input-value edit-employer" [(ngModel)]="item.employer" placeholder="Employer">
+      </div>
+      <div class="input-group">
+        <span class="input-description">Address:</span>
+        <input type="text" class="input-value edit-address" [(ngModel)]="item.address" placeholder="Address">
+      </div>
+      <div class="input-group">
+        <span class="input-description">Dates:</span>
+        <input type="text" class="input-value edit-dates" [(ngModel)]="item.dates" placeholder="Dates of Employment">
+      </div>
+      <div class="input-group" *ngFor="let bullet of item.bullets; let i = index">
+        <span class="input-description">{{ i == 0 ? 'Bullets:' : ''}}</span>
+        <input type="text" class="input-value edit-bullets" [(ngModel)]="item.bullets[i]" placeholder="Bullet text">
+        <button (click)="removeBullet(i)">x</button>
+      </div>
+      <div class="input-group">
+        <span class="input-description"></span>
+        <button (click)="addBullet()">+</button>
+      </div>
+  </fieldset>
+  <div class="edit-buttons">
+    <input *ngIf="id != ''" type="submit" value="Delete" (click)="deleteItem()">
+    <input type="submit" value="Submit" (click)="id != '' ? updatePost() : createPost()">
+  </div>
+</div>

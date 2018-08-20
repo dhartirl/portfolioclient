@@ -1,0 +1,12 @@
+<div class="job" *ngFor="let job of jobs">
+  <h4 class="job-title">{{job.title}}</h4>
+  <div class="job-details">
+    <span class="job-employer">{{job.employer}}</span>
+    <span class="job-address">| {{job.address}}</span>
+    <span class="job-dates">{{job.dates}}</span>
+  </div>
+  <a *ngIf="canEdit" routerLink="/jobs/{{job._id}}/edit" class="job-edit-link">Edit</a>
+  <ul class="job-bullets">
+    <li *ngFor="let bullet of job.bullets">{{bullet}}</li>
+  </ul>
+</div>
