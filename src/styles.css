@@ -13,7 +13,7 @@ body {
     background: url('/assets/img/bgpattern.png');
 }
 
-pre.code {
+pre {
     white-space: pre-wrap;
     background: #333;
     color: #fff;
