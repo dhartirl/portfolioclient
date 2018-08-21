@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiLocation: process.env.apiLocation
+  apiLocation: "https://dhartportfolioapi.herokuapp.com"
 };
