@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiLocation: 'https://api.dhart.ie'
+  apiLocation: process.env.apiLocation
 };
