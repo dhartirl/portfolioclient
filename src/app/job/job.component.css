@@ -28,3 +28,20 @@
 .job-edit-link, .job-edit-link:hover, .job-edit-link:visited {
     color: #ffffff;
 }
+
+@media only screen and (max-width: 640px) {
+    .job-details {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .job-address, .job-title, .job-dates {
+        text-align: center;
+    }
+    .job-dates {
+      width: 100%;
+      margin: 5px 0;
+    }
+    .job-bullets {
+        padding-left: 20px;
+    }
+}

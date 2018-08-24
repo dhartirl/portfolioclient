@@ -3,6 +3,7 @@
     padding: 40px 30px;
     line-height: 1.4em;
     border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 .article-title {
@@ -44,4 +45,20 @@
 
 .article-tech {
     margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .article {
+        margin: 15px;
+    }
+    .article-blurb {
+        flex-direction: column;
+    }
+    .article-image-container {
+        max-width: 90%;
+        margin: auto;
+    }
+    .article-details {
+        padding: 0;
+    }
 }

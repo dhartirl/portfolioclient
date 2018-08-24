@@ -19,3 +19,9 @@
 .site-navigation-item:last-of-type {
     border-right: none;
 }
+
+@media only screen and (max-width: 1024px) {
+    .site-navigation {
+        border-bottom: 1px solid #fff;
+    }
+}

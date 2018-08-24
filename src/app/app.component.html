@@ -1,17 +1,20 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <ul class="body-contact">
-  <li class="contact-phone"><fa-icon icon="phone-square"></fa-icon> {{contactPhone}}</li>
-  <li class="contact-email"><fa-icon icon="envelope-square"></fa-icon> {{contactEmail}}</li>
+    <h3 class="mobile-title">{{title}} - {{subtitle}}</h3>
+    <li class="contact-phone"><fa-icon icon="phone-square"></fa-icon> {{contactPhone}}</li>
+    <li class="contact-email"><fa-icon icon="envelope-square"></fa-icon> {{contactEmail}}</li>
 </ul>
+<div class="body-mobile-menu">
+    <app-navigation></app-navigation>
+</div>
 <div class="body-container">
-  <div class="body-main">
-      <div class="main-container">
-          <router-outlet></router-outlet>
-      </div>
-  </div>
-  <div class="body-sidebar">
-      <h3 class="sidebar-title">{{title}} - {{subtitle}}</h3>
-      <app-navigation></app-navigation>
-      <app-portfolio></app-portfolio>
-  </div>
+    <div class="body-main">
+        <div class="main-container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div class="body-sidebar">
+        <h3 class="sidebar-title">{{title}} - {{subtitle}}</h3>
+        <app-navigation></app-navigation>
+        <app-portfolio></app-portfolio>
+    </div>
 </div>

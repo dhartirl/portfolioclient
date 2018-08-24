@@ -45,3 +45,56 @@
     color: #fff;
     text-align: center;
 }
+
+.body-mobile-menu {
+    display: none;
+}
+
+.mobile-title {
+    display: none;
+    color: #fff;
+    margin: 0;
+    font-size: 1.6em;
+}
+
+@media only screen and (max-width: 1366px) {
+    .body-sidebar {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+    .body-container {
+        padding: 0;
+        height: auto;
+    }
+
+    .body-mobile-menu {
+        display: block;
+    }
+
+    .mobile-title {
+        display: block;
+    }
+
+    .body-sidebar {
+        display: none;
+    }
+
+    .body-contact {
+        float: none;
+        position: relative;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .main-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+}

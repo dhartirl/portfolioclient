@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -43,9 +44,19 @@ I don't like stagnation, so I'm constantly looking for new tasks to take on and 
     }
   ];
 
-  constructor() { }
+  constructor(
+    private metaService: Meta,
+    private titleService: Title
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle("Home | David Hart - Web Developer");
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content: 'Irish Web Developer with a frontend focus and some full-stack experience. Loves to keep things simple and push code others can read.'
+      }
+    ]);
   }
 
 }
