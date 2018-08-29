@@ -1,4 +1,4 @@
 <div class="site-navigation">
-  <a [href]="item.url" class="site-navigation-item" *ngFor="let item of items">{{ item.name }}</a>
-  <a class="site-navigation-item" href="#" *ngIf="loggedIn" (click)="logout()">Logout</a>
+  <a [routerLink]="item.url" class="site-navigation-item" *ngFor="let item of items">{{ item.name }}</a>
+  <a class="site-navigation-item" routerLink="#" *ngIf="loggedIn" (click)="logout()">Logout</a>
 </div>

@@ -51,6 +51,9 @@
 .hero-image {
     margin: auto;
     object-fit: contain;
+    max-width: 250px;
+    max-height: 200px;
+    border-radius: 5%;
 }
 
 @media only screen and (max-width: 1024px) {
